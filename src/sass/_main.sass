@@ -1,0 +1,156 @@
+$primary: #B5B5B5
+$secondary: #007AD9
+
+$desc: 1200
+$tab: 1024
+$mob: 767
+
+=flex($vert:space-between, $hor:stretch)
+	display: flex
+	justify-content: $vert
+	align-items: $hor
+	flex-wrap: wrap
+
+=playfair
+	font-family: 'Playfair Display', serif
+
+
+a
+	text-decoration: none
+	color: inherit
+
+
+*
+	transition: hover, .5s
+
+.inner
+	width: 1170px
+	margin: 0 auto
+	position: relative
+	padding: 0 10px
+	+r($desc)
+		width: auto
+.click
+	font-size: 12px
+	font-weight: bold
+	text-transform: uppercase
+	color: $primary
+	cursor: pointer
+	&:hover
+		color: black
+	&_line
+		border-bottom: 2px solid transparent
+		padding-bottom: 5px
+		&:hover
+			border-bottom: 2px solid $secondary
+
+.header
+	&__nav
+		&.is-visible
+			display: block
+
+	&__top
+		height: 45px
+		line-height: 45px
+		+clr
+	&__top-left
+		float: left
+		ul
+			font-size: 0
+		li
+			display: inline-block
+			margin-right: 30px
+			&:last-of-type
+				margin-right: 0
+
+	&__top-right
+		float: right
+		+clr
+	&__select-box
+		float: left
+		border-right: 1px solid #EDEDED
+		padding: 0 20px
+		&:last-of-type
+			border: none
+			padding-right: 0
+		position: relative
+	&__select-wrap
+		position: relative
+
+		select
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			opacity: 0
+			width: 100%
+
+	&__select-result
+		&:after
+			display: inline-block
+			content: ''
+			+s(arr-down)
+			vertical-align: middle
+			margin-left: 15px
+	&__main
+		border-top: 1px solid #EDEDED
+		border-bottom: 1px solid #EDEDED
+		padding: 27px 0
+		& .inner
+			+flex(space-between, center)
+	&__bag
+		a
+			display: inline-block
+			vertical-align: middle
+	&__bag-result-wrap
+		display: inline-block
+		vertical-align: middle
+		border: 2px solid $secondary
+		border-radius: 50%
+		width: 45px
+		height: 45px
+		position: relative
+		margin: 0 15px
+	&__bag-result
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		font-size: 12px
+		font-weight: bold
+	&__search
+		display: inline-block
+		vertical-align: middle
+		input[type="text"]
+			display: none
+		input[type="submit"]
+			display: block
+			+s(search)
+			background-color: transparent
+
+	&__burger
+		width: 40px
+		height: 40px
+		position: absolute
+		left: 10px
+		top: 15px
+		display: none
+		+r($mob)
+			display: block
+		span
+			display: block
+			height: 4px
+			background: white
+			margin-top: 7px
+
+
+.nav
+	font-size: 0
+	li
+		display: inline-block
+		margin-right: 50px
+		&:last-of-type
+			margin-right: 0
+	& .colored
+		color: #FF3F13
+
