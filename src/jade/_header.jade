@@ -9,7 +9,7 @@ header.header
 						li: a.click(href="#") help
 				.header__top-right
 					.header__select-box
-						.header__select-wrap
+						.header__select-wrap.header__select-currency
 							span.header__select-result.click dollars
 							select
 								option Dollars
@@ -19,16 +19,20 @@ header.header
 						.header__select-wrap
 							span.header__select-result.click En
 							select
+								option En
 								option Ukr
 								option Rus
-								option Pol
 		.header__main
 			.inner
-				a(href="#").header__logo
+				.header__burger
+					span
+					span
+					span
+				a(href="#").logo.header__logo
 					img(src="img/logo.png" alt="logo")
-				ul.nav
+				ul.nav.header__nav
 					li: a.click.click_line(href="#") Home
-					li: a.click.click_line(href="#") Catalog
+					li: a.click.click_line.is-active(href="#") Catalog
 					li: a.click.click_line(href="#") News
 					li: a.click.click_line.colored(href="#") Sale
 					li: a.click.click_line(href="#") About
@@ -38,16 +42,12 @@ header.header
 					a(href="#").click your bag
 					.header__bag-result-wrap
 						span.header__bag-result 2
-					form.header__search
-						input(type="text")
-						input(type="submit" value="")
+					a(href="#").header__search
 
 
 
 
 
-.header__burger
-			span
-			span
-			span
+
+
 //end header

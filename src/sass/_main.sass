@@ -41,18 +41,43 @@ a
 	&_line
 		border-bottom: 2px solid transparent
 		padding-bottom: 5px
-		&:hover
+		&.is-active
+			color: black
 			border-bottom: 2px solid $secondary
-
+		&:hover
+			@extend .click_line.is-active
+	&_color
+		color: black
 .header
 	&__nav
+		+r($mob)
+			position: absolute
+			bottom: -180px
+			left: 0
+			width: 100%
+			background: white
+			z-index: 100
+			display: none
+			li
+				display: block
+				text-align: center
+				margin: 0 0 12px 0
 		&.is-visible
 			display: block
-
+	&__logo
+		+r($tab)
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+		+r($mob)
+			top: -10px
 	&__top
 		height: 45px
 		line-height: 45px
 		+clr
+		+r($mob)
+			display: none
 	&__top-left
 		float: left
 		ul
@@ -98,6 +123,8 @@ a
 		padding: 27px 0
 		& .inner
 			+flex(space-between, center)
+			+r($tab)
+				padding-top: 40px
 	&__bag
 		a
 			display: inline-block
@@ -121,18 +148,13 @@ a
 	&__search
 		display: inline-block
 		vertical-align: middle
-		input[type="text"]
-			display: none
-		input[type="submit"]
-			display: block
-			+s(search)
-			background-color: transparent
+		+s(search)
+		background-color: transparent
 
 	&__burger
 		width: 40px
 		height: 40px
-		position: absolute
-		left: 10px
+		//position: absolute
 		top: 15px
 		display: none
 		+r($mob)
@@ -140,7 +162,7 @@ a
 		span
 			display: block
 			height: 4px
-			background: white
+			background: $primary
 			margin-top: 7px
 
 
@@ -154,3 +176,123 @@ a
 	& .colored
 		color: #FF3F13
 
+.content
+	padding-top: 100px
+	h1
+		font-size: 58px
+		color: #333
+		text-align: center
+		+playfair
+.catalog
+	padding-top: 55px
+	padding-bottom: 50px
+	&__top
+		margin-bottom: 50px
+		ul
+			@extend .nav
+			text-align: center
+			li
+				display: inline-block
+				+r($mob)
+					text-align: center
+					margin: 0 10px 10px 10px
+	&__box
+		+flex(space-between)
+		margin-bottom: 55px
+		+r($tab)
+			justify-content: space-around
+		+r($mob)
+	&__more-wrap
+		text-align: center
+	&__more
+		background: transparent
+
+.item
+	position: relative
+	text-align: center
+	margin-bottom: 30px
+
+	&__img
+		display: block
+	&__name
+		+playfair
+		font-size: 16px
+		margin-top: 25px
+		margin-bottom: 10px
+	&__price
+		font-size: 16px
+		color: $primary
+	&__old-price
+		text-decoration: line-through
+		display: inline-block
+		margin-right: 10px
+	&__new-price
+		color: #FF3F13
+	&__new
+		border-radius: 13px
+		//background: $secondary
+		color: white
+		position: absolute
+		left: 25px
+		top: 25px
+		padding: 8px
+		text-transform: uppercase
+		background-color: #1274d3
+		background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.25) 99%, rgba(255, 255, 255, 0.25) 100%)
+
+
+.subscribe
+	background: url("../img/subscribe-bg.jpg") center center repeat
+	background-size: cover
+	padding: 65px 0
+	text-align: center
+	&__title
+		font-size: 12px
+		color: #35667A
+		font-weight: bold
+		text-transform: uppercase
+	&__subtitle
+		color: white
+		font-size: 38px
+		+playfair
+		margin: 25px 0
+	form
+		position: relative
+		display: inline-block
+		input[type="email"]
+			border: 2px solid rgba(white, .3)
+			height: 50px
+			line-height: 50px
+			background: transparent
+			border-radius: 25px
+			padding: 0 35px 0 25px
+			text-transform: uppercase
+			color: white
+			&::placeholder
+				color: white
+				text-transform: uppercase
+		input[type="submit"]
+			background: transparent
+			display: block
+			position: absolute
+			right: 19px
+			top: 19px
+			+s(arr-right)
+.footer
+	.inner
+		+flex(space-between, center)
+		padding: 30px 10px
+		+r($mob)
+			justify-content: center
+	&__nav
+		+r($tab)
+			display: none
+	&__logo
+		+r($mob)
+			display: none
+
+.copyrights
+	@extend .click
+	cursor: default
+	&:hover
+		color: $primary

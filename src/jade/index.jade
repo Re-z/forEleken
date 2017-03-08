@@ -11,11 +11,66 @@ block content
 
 	main.content
 		.inner
+			h1 Catalog
+			.catalog
+				.catalog__top
+					ul
+						li.click.click_line.is-active(data-filter="all") all
+						li.click.click_line(data-filter="t-shirt") t-shirts
+						li.click.click_line(data-filter="sweater") sweaters
+						li.click.click_line(data-filter="short") shorts
+						li.click.click_line(data-filter="jacket") jackets
+						li.click.click_line(data-filter="accessoiry") accessoires
+				.catalog__box
+					.item(data-type="short")
+						img.item__img(src="img/catalog-1.jpg")
+						p.item__name Printed swimsuit
+						span.item__price $23
+					.item(data-type="short")
+						img.item__img(src="img/catalog-2.jpg")
+						p.item__name Jogging bermuda shorts
+						span.item__price
+							span.item__old-price $36
+							span.item__new-price $12
+					.item(data-type="shoes")
+						img.item__img(src="img/catalog-3.jpg")
+						p.item__name Basic beach flip flops
+						span.item__price $9
+						span.item__new new
+					.item(data-type="accessoiry")
+						img.item__img(src="img/catalog-4.jpg")
+						p.item__name Black sunglasses
+						span.item__price $29
+					.item(data-type="t-shirt")
+						img.item__img(src="img/catalog-5.jpg")
+						p.item__name Long sleeved twill shirt
+						span.item__price $20
+					.item(data-type="short")
+						img.item__img(src="img/catalog-6.jpg")
+						p.item__name Basic swimsuit
+						span.item__price $36
+					.item(data-type="short")
+						img.item__img(src="img/catalog-7.jpg")
+						p.item__name Bleached shorts
+						span.item__price $12
+					.item(data-type="t-shirt")
+						img.item__img(src="img/catalog-8.jpg")
+						p.item__name T-shirt with lower panel
+						span.item__price
+							span.item__old-price $32
+							span.item__new-price $12
+				.catalog__more-wrap
+					button.catalog__more.click load more...
 
 
 
-
-
+		section.subscribe
+			.inner
+				p.subscribe__title subscribe
+				p.subscribe__subtitle Stay updated on news
+				form
+					input(type="email" placeholder="your email address")
+					input(type="submit" value="")
 
 	include _footer
 

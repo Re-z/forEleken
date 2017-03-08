@@ -23,7 +23,7 @@
             </div>
             <div class="header__top-right">
               <div class="header__select-box">
-                <div class="header__select-wrap"><span class="header__select-result click">dollars</span>
+                <div class="header__select-wrap header__select-currency"><span class="header__select-result click">dollars</span>
                   <select>
                     <option>Dollars</option>
                     <option>Euros</option>
@@ -34,9 +34,9 @@
               <div class="header__select-box">
                 <div class="header__select-wrap"><span class="header__select-result click">En</span>
                   <select>
+                    <option>En</option>
                     <option>Ukr</option>
                     <option>Rus</option>
-                    <option>Pol</option>
                   </select>
                 </div>
               </div>
@@ -44,33 +44,91 @@
           </div>
         </div>
         <div class="header__main">
-          <div class="inner"><a href="#" class="header__logo"><img src="img/logo.png" alt="logo"></a>
-            <ul class="nav">
+          <div class="inner">
+            <div class="header__burger"><span></span><span></span><span></span></div><a href="#" class="logo header__logo"><img src="img/logo.png" alt="logo"></a>
+            <ul class="nav header__nav">
               <li><a href="#" class="click click_line">Home</a></li>
-              <li><a href="#" class="click click_line">Catalog</a></li>
+              <li><a href="#" class="click click_line is-active">Catalog</a></li>
               <li><a href="#" class="click click_line">News</a></li>
               <li><a href="#" class="click click_line colored">Sale</a></li>
               <li><a href="#" class="click click_line">About</a></li>
               <li><a href="#" class="click click_line">Contact</a></li>
             </ul>
             <div class="header__bag"><a href="#" class="click">your bag</a>
-              <div class="header__bag-result-wrap"><span class="header__bag-result">2</span></div>
-              <form class="header__search">
-                <input type="text">
-                <input type="submit" value="">
-              </form>
+              <div class="header__bag-result-wrap"><span class="header__bag-result">2</span></div><a href="#" class="header__search"></a>
             </div>
           </div>
         </div>
       </header>
-      <div class="header__burger"><span></span><span></span><span></span></div>
       <!--end header-->
       <main class="content">
-        <div class="inner"></div>
+        <div class="inner">
+          <h1>Catalog</h1>
+          <div class="catalog">
+            <div class="catalog__top">
+              <ul>
+                <li data-filter="all" class="click click_line is-active">all</li>
+                <li data-filter="t-shirt" class="click click_line">t-shirts</li>
+                <li data-filter="sweater" class="click click_line">sweaters</li>
+                <li data-filter="short" class="click click_line">shorts</li>
+                <li data-filter="jacket" class="click click_line">jackets</li>
+                <li data-filter="accessoiry" class="click click_line">accessoires</li>
+              </ul>
+            </div>
+            <div class="catalog__box">
+              <div data-type="short" class="item"><img src="img/catalog-1.jpg" class="item__img">
+                <p class="item__name">Printed swimsuit</p><span class="item__price">$23</span>
+              </div>
+              <div data-type="short" class="item"><img src="img/catalog-2.jpg" class="item__img">
+                <p class="item__name">Jogging bermuda shorts</p><span class="item__price"><span class="item__old-price">$36</span><span class="item__new-price">$12</span></span>
+              </div>
+              <div data-type="shoes" class="item"><img src="img/catalog-3.jpg" class="item__img">
+                <p class="item__name">Basic beach flip flops</p><span class="item__price">$9</span><span class="item__new">new</span>
+              </div>
+              <div data-type="accessoiry" class="item"><img src="img/catalog-4.jpg" class="item__img">
+                <p class="item__name">Black sunglasses</p><span class="item__price">$29</span>
+              </div>
+              <div data-type="t-shirt" class="item"><img src="img/catalog-5.jpg" class="item__img">
+                <p class="item__name">Long sleeved twill shirt</p><span class="item__price">$20</span>
+              </div>
+              <div data-type="short" class="item"><img src="img/catalog-6.jpg" class="item__img">
+                <p class="item__name">Basic swimsuit</p><span class="item__price">$36</span>
+              </div>
+              <div data-type="short" class="item"><img src="img/catalog-7.jpg" class="item__img">
+                <p class="item__name">Bleached shorts</p><span class="item__price">$12</span>
+              </div>
+              <div data-type="t-shirt" class="item"><img src="img/catalog-8.jpg" class="item__img">
+                <p class="item__name">T-shirt with lower panel</p><span class="item__price"><span class="item__old-price">$32</span><span class="item__new-price">$12</span></span>
+              </div>
+            </div>
+            <div class="catalog__more-wrap">
+              <button class="catalog__more click">load more...</button>
+            </div>
+          </div>
+        </div>
+        <section class="subscribe">
+          <div class="inner">
+            <p class="subscribe__title">subscribe</p>
+            <p class="subscribe__subtitle">Stay updated on news</p>
+            <form>
+              <input type="email" placeholder="your email address">
+              <input type="submit" value="">
+            </form>
+          </div>
+        </section>
       </main>
       <!--start footer-->
       <footer class="footer">
-        <div class="inner"></div>
+        <div class="inner"><a href="#" class="logo footer__logo"><img src="img/logo.png" alt="logo"></a>
+          <ul class="nav footer__nav">
+            <li><a href="#" class="click click_color click_line">Home</a></li>
+            <li><a href="#" class="click click_color click_line">Catalog</a></li>
+            <li><a href="#" class="click click_color click_line">News</a></li>
+            <li><a href="#" class="click click_color click_line">Sale</a></li>
+            <li><a href="#" class="click click_color click_line">About</a></li>
+            <li><a href="#" class="click click_color click_line">Contact</a></li>
+          </ul><span class="copyrights">©2010 - 2016 All rights reserved copy</span>
+        </div>
       </footer>
       <!--end footer-->
     </div>
